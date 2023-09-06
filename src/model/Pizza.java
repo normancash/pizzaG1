@@ -7,16 +7,17 @@ public class Pizza extends Producto {
     private TAMANO_PIZZA tamano;
     private TIPO_BORDE tipoBorde;
 
-    public Pizza(Integer id, String ingredientes
-            , TAMANO_PIZZA tamano
-            , TIPO_BORDE tipoBorde) {
+    public Pizza(double precio, Integer id
+            , String ingredientes, TAMANO_PIZZA tamano, TIPO_BORDE tipoBorde) {
+        super(precio);
         this.id = id;
         this.ingredientes = ingredientes;
         this.tamano = tamano;
         this.tipoBorde = tipoBorde;
     }
 
-    public Pizza() {
+    public Pizza(double precio) {
+        super(precio);
     }
 
     @Override

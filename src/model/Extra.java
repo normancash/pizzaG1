@@ -1,13 +1,16 @@
 package model;
 
-public class Extra {
+public class Extra extends Producto{
 
     private Integer id;
     private String nombre;
 
-    public Extra(){}
+    public Extra(double precio){
+        super(precio);
+    }
 
-    public Extra(Integer id, String nombre) {
+    public Extra(double precio,Integer id, String nombre) {
+        super(precio);
         this.id = id;
         this.nombre = nombre;
     }

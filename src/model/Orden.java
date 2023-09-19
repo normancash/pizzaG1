@@ -1,6 +1,7 @@
 package model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Orden {
 
@@ -12,13 +13,13 @@ public class Orden {
     private double montoTotal;
     private double subTotal;
 
-    private DetalleOrden detalle[] ;
+    private List<DetalleOrden> detalle ;
 
 
     public Orden(Integer id, Cliente cliente
             , Sucursal suc, Date fecha
             , double montoTotal, double subTotal
-            , DetalleOrden [] detalle) {
+            , List<DetalleOrden> detalle) {
         this.id = id;
         this.cliente = cliente;
         this.suc = suc;
@@ -47,10 +48,10 @@ public class Orden {
                 '}';
     }
 
-    private String detalleString(DetalleOrden [] detalle) {
+    private String detalleString(List<DetalleOrden> detalle) {
         String cad = "";
         for (DetalleOrden d : detalle) {
-            cad += " " + d;
+            cad += " " + d + "\\n";
         }
         return cad;
     }

@@ -1,6 +1,8 @@
 import model.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,13 +16,13 @@ public class Main {
                         ,"923432234");
 
 
-        DetalleOrden  detalles [] = new DetalleOrden[3];
+        List<DetalleOrden> detalles  = new ArrayList<>();
         DetalleOrden detalleOrden0 = new DetalleOrden(1,p1,null,1);
         DetalleOrden detalleOrden1 = new DetalleOrden(1,p1,null,1);
         DetalleOrden detalleOrden2 = new DetalleOrden(1,p1,null,1);
-        detalles[0] = detalleOrden0;
-        detalles[1] = detalleOrden1;
-        detalles[2] = detalleOrden2;
+        detalles.add(detalleOrden0);
+        detalles.add(detalleOrden1);
+        detalles.add(detalleOrden2);
         //Orden
         Orden orden = new Orden(1,c1,suc1,new Date()
                 ,0.00,0.00,detalles);
